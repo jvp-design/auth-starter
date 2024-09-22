@@ -38,6 +38,8 @@
 	"type": "module",
 	"dependencies": {
 		"clsx": "^2.1.1",
+		"nodemailer": "^6.9.15",
+		"nodemailer-mailgun-transport": "^2.1.5",
 		"tailwind-merge": "^2.5.2",
 		"tailwind-variants": "^0.2.1"
 	}
