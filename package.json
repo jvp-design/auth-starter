@@ -9,21 +9,25 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"drizzle:generate-pg": "drizzle-kit generate"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.11.0",
+		"@lucia-auth/adapter-drizzle": "^1.1.0",
 		"@sveltejs/adapter-node": "^5.2.4",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^4.0.0-next.6",
 		"@types/eslint": "^9.6.0",
 		"autoprefixer": "^10.4.20",
+		"drizzle-kit": "^0.24.2",
 		"eslint": "^9.0.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-prettier": "^5.2.1",
 		"eslint-plugin-simple-import-sort": "^12.1.1",
 		"eslint-plugin-svelte": "^2.36.0",
 		"globals": "^15.0.0",
+		"lucia": "^3.2.0",
 		"postcss": "^8.4.47",
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.1.2",
@@ -38,8 +42,10 @@
 	"type": "module",
 	"dependencies": {
 		"clsx": "^2.1.1",
+		"drizzle-orm": "^0.33.0",
 		"nodemailer": "^6.9.15",
 		"nodemailer-mailgun-transport": "^2.1.5",
+		"pg": "^8.13.0",
 		"tailwind-merge": "^2.5.2",
 		"tailwind-variants": "^0.2.1"
 	}
