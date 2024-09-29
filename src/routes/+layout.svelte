@@ -1,5 +1,9 @@
 <script>
-	import '../app.css'
+	import '../app.css';
+
+	const { children } = $props();
 </script>
 
-<slot />
+<main class="h-screen bg-gray-500">
+	{@render children()}
+</main>
