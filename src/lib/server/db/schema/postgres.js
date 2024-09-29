@@ -1,13 +1,18 @@
 import { new_id } from '../../../utils/id/index.js';
 
-import { pgTable, text, timestamp } from 'drizzle-orm/pg-core';
+import { pgTable, text, boolean, timestamp } from 'drizzle-orm/pg-core';
+import { sql } from "drizzle-orm";
 
 export const user_table = pgTable('user', {
 	id: text('id')
 		.$default(function () {
 			return new_id('user');
 		})
-		.primaryKey()
+		.primaryKey(),
+	email: text('email').notNull().unique(),
+	hashed_password: text('hashed_password'),
+	active: boolean('active').default(false),
+	created_at: timestamp('created_at').default(sql`now()`)
 });
 
 export const session_table = pgTable('session', {
