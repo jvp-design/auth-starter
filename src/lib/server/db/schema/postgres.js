@@ -1,7 +1,7 @@
 import { new_id } from '../../../utils/id/index.js';
 
-import { pgTable, text, boolean, timestamp } from 'drizzle-orm/pg-core';
-import { sql } from "drizzle-orm";
+import { sql } from 'drizzle-orm';
+import { boolean, pgTable, text, timestamp } from 'drizzle-orm/pg-core';
 
 export const user_table = pgTable('user', {
 	id: text('id')
@@ -29,3 +29,7 @@ export const session_table = pgTable('session', {
 		mode: 'date'
 	}).notNull()
 });
+
+export function lower(email) {
+	return sql`lower(${email})`;
+}
