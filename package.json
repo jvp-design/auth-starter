@@ -43,13 +43,17 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"bits-ui": "^0.21.15",
 		"clsx": "^2.1.1",
 		"drizzle-orm": "^0.33.0",
+		"formsnap": "^1.0.1",
 		"nanoid": "^5.0.7",
 		"nodemailer": "^6.9.15",
 		"nodemailer-mailgun-transport": "^2.1.5",
 		"pg": "^8.13.0",
+		"sveltekit-superforms": "^2.19.0",
 		"tailwind-merge": "^2.5.2",
-		"tailwind-variants": "^0.2.1"
+		"tailwind-variants": "^0.2.1",
+		"valibot": "^0.42.1"
 	}
 }
