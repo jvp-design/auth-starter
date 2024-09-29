@@ -19,5 +19,5 @@ const prefixes = {
  * @return {string}
  */
 export function new_id(prefix) {
-	return [prefixes[prefix], nanoid(16)].join('-');
+	return [prefixes[prefix], nanoid(16)].join('_');
 }
